@@ -1,0 +1,24 @@
+{
+  "users": [
+    { "id": "1", "name": "GrammarKing77", "xp": 1250, "era": "Era 3", "rank": 1 },
+    { "id": "2", "name": "SyntaxSorcerer", "xp": 1180, "era": "Era 3", "rank": 2 },
+    { "id": "3", "name": "VerbVortex", "xp": 1050, "era": "Era 2", "rank": 3 },
+    { "id": "4", "name": "NounKnight", "xp": 980, "era": "Era 2", "rank": 4 },
+    { "id": "5", "name": "AdjectiveAce", "xp": 920, "era": "Era 2", "rank": 5 },
+    { "id": "6", "name": "PronounPro", "xp": 850, "era": "Era 2", "rank": 6 },
+    { "id": "7", "name": "DanglingModifier", "xp": 810, "era": "Era 2", "rank": 7 },
+    { "id": "8", "name": "OxfordComma", "xp": 760, "era": "Era 1", "rank": 8 },
+    { "id": "9", "name": "SemicolonSam", "xp": 720, "era": "Era 1", "rank": 9 },
+    { "id": "10", "name": "HyphenHunter", "xp": 680, "era": "Era 1", "rank": 10 },
+    { "id": "11", "name": "ParagraphPilot", "xp": 640, "era": "Era 1", "rank": 11 },
+    { "id": "12", "name": "ClauseClimber", "xp": 610, "era": "Era 1", "rank": 12 },
+    { "id": "13", "name": "TenseTraveler", "xp": 590, "era": "Era 1", "rank": 13 },
+    { "id": "14", "name": "AspectAlchemist", "xp": 550, "era": "Era 1", "rank": 14 },
+    { "id": "15", "name": "VoiceVirtuoso", "xp": 520, "era": "Era 1", "rank": 15 },
+    { "id": "16", "name": "MoodMaster", "xp": 480, "era": "Era 1", "rank": 16 },
+    { "id": "17", "name": "PhrasePhantom", "xp": 450, "era": "Era 1", "rank": 17 },
+    { "id": "18", "name": "GerundGiant", "xp": 420, "era": "Era 1", "rank": 18 },
+    { "id": "19", "name": "InfinitiveIdol", "xp": 390, "era": "Era 1", "rank": 19 },
+    { "id": "20", "name": "ParticiplePixie", "xp": 350, "era": "Era 1", "rank": 20 }
+  ]
+}

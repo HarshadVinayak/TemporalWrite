@@ -1,65 +1,99 @@
-import Image from "next/image";
+'use client';
+
+import { useUserStore } from '@/store/userStore';
+import { LearningTree } from '@/components/LearningTree';
+import { Lesson } from '@/components/Lesson';
+import { Sidebar } from '@/components/Sidebar';
+import { CodexDrawer } from '@/components/CodexDrawer';
+import { VoiceLab } from '@/components/VoiceLab';
+import { ChronoLog } from '@/components/ChronoLog';
+import { Leaderboard } from '@/components/Leaderboard';
+import { NavigationDrawer } from '@/components/NavigationDrawer';
+import { ParallaxBackground } from '@/components/ParallaxBackground';
+import { SettingsModal } from '@/components/SettingsModal';
+import { ChatCortex } from '@/components/ChatCortex';
+import { VisionLab } from '@/components/VisionLab';
+import { QuestSystem } from '@/components/QuestSystem';
+import { LiveLens } from '@/components/LiveLens';
+import { DailyGoalWidget } from '@/components/StudyArchitect';
+import { Flame, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
+  const { currentLessonId, userXP, userLevel, currentStreak, currentGrade, activeCodexChallenge } = useUserStore();
+
+  const eraName = currentGrade < 6 ? 'The Past' : currentGrade < 13 ? 'The Present' : 'The Future';
+  const targetXP = currentGrade < 6 ? 500 : currentGrade < 13 ? 1500 : 3000;
+  const progress = Math.min((userXP / targetXP) * 100, 100);
+
+  if (currentLessonId || activeCodexChallenge) {
+    return <Lesson />;
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="flex flex-col min-h-screen">
+      <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-black/5 dark:border-white/5 flex flex-col relative w-full">
+        <div className="px-6 py-4 flex flex-row items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">TemporalWrite</div>
+            <div className="text-sm font-medium px-2 py-1 rounded-md bg-black/5 dark:bg-white/10 dark:text-white/80 uppercase tracking-widest">{eraName}</div>
+          </div>
+        <div className="flex items-center space-x-6 font-bold text-lg">
+          <div className="flex items-center text-orange-500 gap-1 relative">
+            <motion.div
+              animate={currentStreak >= 2 ? {
+                scale: [1, 1.2, 1],
+                opacity: [0.8, 1, 0.8],
+              } : {}}
+              transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <Flame size={24} className={currentStreak > 0 ? 'fill-orange-500' : ''} />
+            </motion.div>
+            <span className="dark:text-orange-400">{currentStreak}</span>
+          </div>
+          <div className="flex items-center text-blue-500 dark:text-blue-400 gap-1">
+            <Star size={24} className="fill-blue-500 dark:fill-blue-400" />
+            {userXP} XP
+          </div>
+          <div className="flex items-center bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-black shadow-lg shadow-blue-500/20">
+            Lvl {userLevel}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
         </div>
-      </main>
+        <div className="absolute bottom-0 left-0 w-full h-1.5 bg-black/5 dark:bg-white/5">
+          <div 
+            className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-1000 ease-out progress-bar-striped progress-bar-animated"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      </header>
+      
+      {/* Sidebars and main content wrapper */}
+      <div className="relative flex-1 flex">
+        <ParallaxBackground />
+        <Sidebar />
+        
+        {/* Scrollable Path Wrapper */}
+        <main className="flex-1 overflow-x-hidden pt-10 pb-0 flex flex-col items-center md:pl-20 relative z-10 w-full">
+          <div className="text-center mb-10 z-10 relative">
+            <h1 className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400">Your Journey</h1>
+            <p className="text-lg opacity-80">Master time and language</p>
+          </div>
+          
+          <LearningTree />
+        </main>
+      </div>
+      <CodexDrawer />
+      <VoiceLab />
+      <ChronoLog />
+      <Leaderboard />
+      <NavigationDrawer />
+      <ChatCortex />
+      <VisionLab />
+      <QuestSystem />
+      <SettingsModal />
+      <LiveLens />
+      <DailyGoalWidget />
     </div>
   );
 }

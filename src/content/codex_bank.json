@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "id": "parts_of_speech",
+      "name": "Parts of Speech",
+      "description": "Noun, Verb, Adjective, etc.",
+      "questions": [
+        {
+          "id": "c_pos_1", "type": "WordBank", "prompt": "Identify the Noun.", "sentence": "The ___ jumped over the fence.", "options": ["quickly", "cat", "happy", "under"], "correctAnswer": "cat", "explanation": "A noun is a naming word."
+        },
+        {
+          "id": "c_pos_2", "type": "WordBank", "prompt": "Identify the Adjective.", "sentence": "The ___ dog barked.", "options": ["big", "run", "it", "with"], "correctAnswer": "big", "explanation": "Adjectives describe nouns."
+        },
+        { "id": "c_pos_3", "type": "WordBank", "prompt": "Identify the Verb.", "sentence": "She ___ a song.", "options": ["beautiful", "sang", "blue", "slowly"], "correctAnswer": "sang", "explanation": "Verbs are action words." },
+        { "id": "c_pos_4", "type": "WordBank", "prompt": "Identify the Adverb.", "sentence": "He ran ___.", "options": ["fast", "car", "yellow", "think"], "correctAnswer": "fast", "explanation": "Adverbs describe actions." },
+        { "id": "c_pos_5", "type": "WordBank", "prompt": "Identify the Pronoun.", "sentence": "___ is my friend.", "options": ["She", "Green", "Running", "Table"], "correctAnswer": "She", "explanation": "Pronouns replace nouns." },
+        { "id": "c_pos_6", "type": "WordBank", "prompt": "Preposition check.", "sentence": "The book is ___ the table.", "options": ["on", "happy", "read", "very"], "correctAnswer": "on", "explanation": "Prepositions show relationship." },
+        { "id": "c_pos_7", "type": "WordBank", "prompt": "Conjunction check.", "sentence": "I like cats ___ dogs.", "options": ["and", "blue", "jump", "loudly"], "correctAnswer": "and", "explanation": "Conjunctions join words." },
+        { "id": "c_pos_8", "type": "WordBank", "prompt": "Interjection check.", "sentence": "___! That hurt.", "options": ["Ouch", "House", "Walk", "Pretty"], "correctAnswer": "Ouch", "explanation": "Interjections show emotion." },
+        { "id": "c_pos_9", "type": "WordBank", "prompt": "Article check.", "sentence": "___ apple a day...", "options": ["An", "A", "The", "Many"], "correctAnswer": "An", "explanation": "Articles are special adjectives." },
+        { "id": "c_pos_10", "type": "WordBank", "prompt": "Abstract Noun.", "sentence": "___ is a virtue.", "options": ["Patience", "Red", "Climb", "Beside"], "correctAnswer": "Patience", "explanation": "Abstract nouns are ideas." },
+        { "id": "c_pos_11", "type": "WordBank", "prompt": "Collective Noun.", "sentence": "A ___ of lions.", "options": ["pride", "group", "bunch", "team"], "correctAnswer": "pride", "explanation": "Collective nouns for groups." },
+        { "id": "c_pos_12", "type": "WordBank", "prompt": "Proper Noun.", "sentence": "I live in ___.", "options": ["London", "city", "house", "there"], "correctAnswer": "London", "explanation": "Proper nouns are specific." },
+        { "id": "c_pos_13", "type": "WordBank", "prompt": "Common Noun.", "sentence": "I bought a ___.", "options": ["book", "London", "running", "happily"], "correctAnswer": "book", "explanation": "Common nouns are general." },
+        { "id": "c_pos_14", "type": "WordBank", "prompt": "Helping Verb.", "sentence": "I ___ going now.", "options": ["am", "went", "be", "is"], "correctAnswer": "am", "explanation": "'Am' helps the main verb." },
+        { "id": "c_pos_15", "type": "WordBank", "prompt": "Relative Pronoun.", "sentence": "The man ___ saw me.", "options": ["who", "which", "what", "how"], "correctAnswer": "who", "explanation": "Relates back to the noun." }
+      ]
+    },
+    {
+      "id": "verb_tenses",
+      "name": "Verb Tenses",
+      "description": "Master the 12 aspects of time.",
+      "questions": [
+        { "id": "c_vt_1", "type": "Transformer", "prompt": "Simple Past", "originalSentence": "I eat an apple.", "targetStructure": "Simple Past", "correctAnswer": "I ate an apple.", "explanation": "Past of eat is ate." },
+        { "id": "c_vt_2", "type": "Transformer", "prompt": "Present Continuous", "originalSentence": "He plays football.", "targetStructure": "Present Continuous", "correctAnswer": "He is playing football.", "explanation": "am/is/are + verb-ing." },
+        { "id": "c_vt_3", "type": "Transformer", "prompt": "Future Simple", "originalSentence": "We study hard.", "targetStructure": "Future Simple", "correctAnswer": "We will study hard.", "explanation": "will + base verb." },
+        { "id": "c_vt_4", "type": "Transformer", "prompt": "Past Continuous", "originalSentence": "They sleep.", "targetStructure": "Past Continuous", "correctAnswer": "They were sleeping.", "explanation": "was/were + verb-ing." },
+        { "id": "c_vt_5", "type": "Transformer", "prompt": "Present Perfect", "originalSentence": "I finish my work.", "targetStructure": "Present Perfect", "correctAnswer": "I have finished my work.", "explanation": "have/has + past participle." },
+        { "id": "c_vt_6", "type": "Transformer", "prompt": "Past Perfect", "originalSentence": "She arrives late.", "targetStructure": "Past Perfect", "correctAnswer": "She had arrived late.", "explanation": "had + past participle." },
+        { "id": "c_vt_7", "type": "Transformer", "prompt": "Future Perfect", "originalSentence": "They leave by noon.", "targetStructure": "Future Perfect", "correctAnswer": "They will have left by noon.", "explanation": "will have + past participle." },
+        { "id": "c_vt_8", "type": "Transformer", "prompt": "Present Perfect Continuous", "originalSentence": "You wait for an hour.", "targetStructure": "Present Perfect Continuous", "correctAnswer": "You have been waiting for an hour.", "explanation": "have been + verb-ing." },
+        { "id": "c_vt_9", "type": "Transformer", "prompt": "Past Perfect Continuous", "originalSentence": "We run slow.", "targetStructure": "Past Perfect Continuous", "correctAnswer": "We had been running slow.", "explanation": "had been + verb-ing." },
+        { "id": "c_vt_10", "type": "Transformer", "prompt": "Future Continuous", "originalSentence": "I work tomorrow.", "targetStructure": "Future Continuous", "correctAnswer": "I will be working tomorrow.", "explanation": "will be + verb-ing." },
+        { "id": "c_vt_11", "type": "Transformer", "prompt": "Future Perfect Continuous", "originalSentence": "He sleeps for ten hours.", "targetStructure": "Future Perfect Continuous by 8am", "correctAnswer": "He will have been sleeping for ten hours.", "explanation": "will have been + verb-ing." },
+        { "id": "c_vt_12", "type": "Transformer", "prompt": "Zero Conditional", "originalSentence": "Ice melts if you heat it.", "targetStructure": "Zero Conditional", "correctAnswer": "Ice melts if you heat it.", "explanation": "Scientific truths." },
+        { "id": "c_vt_13", "type": "Transformer", "prompt": "First Conditional", "originalSentence": "It rains, I stay home.", "targetStructure": "First Conditional", "correctAnswer": "If it rains, I will stay home.", "explanation": "Real possibilities." },
+        { "id": "c_vt_14", "type": "Transformer", "prompt": "Second Conditional", "originalSentence": "I have money, I travel.", "targetStructure": "Second Conditional", "correctAnswer": "If I had money, I would travel.", "explanation": "Hypothetical present." },
+        { "id": "c_vt_15", "type": "Transformer", "prompt": "Third Conditional", "originalSentence": "You study, you pass.", "targetStructure": "Third Conditional", "correctAnswer": "If you had studied, you would have passed.", "explanation": "Hypothetical past." }
+      ]
+    },
+    {
+      "id": "syntax",
+      "name": "Syntax & Structure",
+      "description": "Building sentences correctly.",
+      "questions": [
+        { "id": "c_sys_1", "type": "ErrorSpotter", "prompt": "Subject-Verb Agreement", "sentenceWithErrors": "The dogs runs fast.", "correctAnswer": "run", "explanation": "Plural subject needs plural verb." },
+        { "id": "c_sys_2", "type": "ErrorSpotter", "prompt": "Subject-Verb Agreement", "sentenceWithErrors": "She don't like it.", "correctAnswer": "doesn't", "explanation": "Third person singular." },
+        { "id": "c_sys_3", "type": "ErrorSpotter", "prompt": "Verb Agreement", "sentenceWithErrors": "Everyone are here.", "correctAnswer": "is", "explanation": "'Everyone' is singular." },
+        { "id": "c_sys_4", "type": "ErrorSpotter", "prompt": "Modifier Placement", "sentenceWithErrors": "I only have one.", "correctAnswer": "have only", "explanation": "Placement of 'only'." },
+        { "id": "c_sys_5", "type": "ErrorSpotter", "prompt": "Pronoun Case", "sentenceWithErrors": "Between you and I.", "correctAnswer": "me", "explanation": "Object of preposition." },
+        { "id": "c_sys_6", "type": "ErrorSpotter", "prompt": "Parallelism", "sentenceWithErrors": "I like hiking and to swim.", "correctAnswer": "swimming", "explanation": "Gerund pattern parity." },
+        { "id": "c_sys_7", "type": "ErrorSpotter", "prompt": "Double Negative", "sentenceWithErrors": "I don't need nothing.", "correctAnswer": "anything", "explanation": "Avoid double negatives." },
+        { "id": "c_sys_8", "type": "ErrorSpotter", "prompt": "Article Usage", "sentenceWithErrors": "He is a honest man.", "correctAnswer": "an", "explanation": "Silent 'h' needs 'an'." },
+        { "id": "c_sys_9", "type": "ErrorSpotter", "prompt": "Possessive", "sentenceWithErrors": "Its a nice day.", "correctAnswer": "It's", "explanation": "Contraction needed." },
+        { "id": "c_sys_10", "type": "ErrorSpotter", "prompt": "Possessive", "sentenceWithErrors": "The boys hat.", "correctAnswer": "boy's", "explanation": "Singular possessive." },
+        { "id": "c_sys_11", "type": "ErrorSpotter", "prompt": "Plural", "sentenceWithErrors": "Three mouses.", "correctAnswer": "mice", "explanation": "Irregular plural." },
+        { "id": "c_sys_12", "type": "ErrorSpotter", "prompt": "Comparative", "sentenceWithErrors": "More better.", "correctAnswer": "better", "explanation": "Avoid double comparatives." },
+        { "id": "c_sys_13", "type": "ErrorSpotter", "prompt": "Superlative", "sentenceWithErrors": "Best of the two.", "correctAnswer": "better", "explanation": "Comparative for two." },
+        { "id": "c_sys_14", "type": "ErrorSpotter", "prompt": "Past Tense", "sentenceWithErrors": "I have went.", "correctAnswer": "gone", "explanation": "Past participle needed." },
+        { "id": "c_sys_15", "type": "ErrorSpotter", "prompt": "Dangling Modifier", "sentenceWithErrors": "Walking home, the tree fell.", "correctAnswer": "I saw the tree fall", "explanation": "Who was walking?" }
+      ]
+    },
+    {
+      "id": "transformations",
+      "name": "Advanced Grammar",
+      "description": "Passive voice, Conditionals, and Reported speech.",
+      "questions": [
+        { "id": "c_adv_1", "type": "Transformer", "prompt": "Passive Voice", "originalSentence": "The cat chased the mouse.", "targetStructure": "Passive Voice", "correctAnswer": "The mouse was chased by the cat.", "explanation": "Object becomes subject." },
+        { "id": "c_adv_2", "type": "Transformer", "prompt": "Reported Speech", "originalSentence": "He said, 'I am tired.'", "targetStructure": "Reported Speech", "correctAnswer": "He said that he was tired.", "explanation": "Shift tenses back." },
+        { "id": "c_adv_3", "type": "Transformer", "prompt": "Question Form", "originalSentence": "You are coming.", "targetStructure": "Interrogative", "correctAnswer": "Are you coming?", "explanation": "Inversion for questions." },
+        { "id": "c_adv_4", "type": "Transformer", "prompt": "Negative Form", "originalSentence": "I like it.", "targetStructure": "Negative", "correctAnswer": "I do not like it.", "explanation": "Add auxiliary + not." },
+        { "id": "c_adv_5", "type": "Transformer", "prompt": "Active Voice", "originalSentence": "The cake was eaten by him.", "targetStructure": "Active Voice", "correctAnswer": "He ate the cake.", "explanation": "Subject performs action." },
+        { "id": "c_adv_6", "type": "Transformer", "prompt": "Inversion", "originalSentence": "I have never seen such a sight.", "targetStructure": "Inverted", "correctAnswer": "Never have I seen such a sight.", "explanation": "Emphasis inversion." },
+        { "id": "c_adv_7", "type": "Transformer", "prompt": "Relative Clause", "originalSentence": "The car is red. It is mine.", "targetStructure": "Combined (who/which)", "correctAnswer": "The car which is red is mine.", "explanation": "Use relative pronoun." },
+        { "id": "c_adv_8", "type": "Transformer", "prompt": "Participial Phrase", "originalSentence": "He was tired. He went to bed.", "targetStructure": "Being tired...", "correctAnswer": "Being tired, he went to bed.", "explanation": "Concise combining." },
+        { "id": "c_adv_9", "type": "Transformer", "prompt": "Subjunctive", "originalSentence": "I suggest that he goes.", "targetStructure": "Subjunctive", "correctAnswer": "I suggest that he go.", "explanation": "Base form for suggestions." },
+        { "id": "c_adv_10", "type": "Transformer", "prompt": "Causative", "originalSentence": "I fixed my car.", "targetStructure": "I had my car...", "correctAnswer": "I had my car fixed.", "explanation": "Action done for subject." },
+        { "id": "c_adv_11", "type": "Transformer", "prompt": "Gerund vs Infinitive", "originalSentence": "I remember to post the letter.", "targetStructure": "I remember posting...", "correctAnswer": "I remember posting the letter.", "explanation": "Shift in meaning." },
+        { "id": "c_adv_12", "type": "Transformer", "prompt": "Used to", "originalSentence": "I smoked in the past.", "targetStructure": "Used to", "correctAnswer": "I used to smoke.", "explanation": "Past habits." },
+        { "id": "c_adv_13", "type": "Transformer", "prompt": "Had better", "originalSentence": "You should leave.", "targetStructure": "Had better", "correctAnswer": "You had better leave.", "explanation": "Strong advice." },
+        { "id": "c_adv_14", "type": "Transformer", "prompt": "Emphasis", "originalSentence": "I love you.", "targetStructure": "I do...", "correctAnswer": "I do love you.", "explanation": "Emphatic 'do'." },
+        { "id": "c_adv_15", "type": "Transformer", "prompt": "Fronting", "originalSentence": "The castle stood on the hill.", "targetStructure": "On the hill stood...", "correctAnswer": "On the hill stood the castle.", "explanation": "Place emphasis." }
+      ]
+    },
+    {
+      "id": "punctuation",
+      "name": "Punctuation",
+      "description": "Semicolons, colons, and commas.",
+      "questions": [
+        { "id": "c_pun_1", "type": "WordBank", "prompt": "Semicolon usage.", "sentence": "I like summer; ___ I hate the heat.", "options": ["however", "and", "but", "so"], "correctAnswer": "however", "explanation": "Transition word." },
+        { "id": "c_pun_2", "type": "WordBank", "prompt": "Oxford Comma.", "sentence": "Milk, eggs, ___ bread.", "options": ["and", "or", "but", "while"], "correctAnswer": "and", "explanation": "Final list item." },
+        { "id": "c_pun_3", "type": "WordBank", "prompt": "Colon usage.", "sentence": "Ingredients: flour, sugar, ___ butter.", "options": ["and", "also", "plus", "with"], "correctAnswer": "and", "explanation": "Lists after colons." },
+        { "id": "c_pun_4", "type": "WordBank", "prompt": "Apostrophe.", "sentence": "The ___ wings were blue.", "options": ["bird's", "birds", "bird", "birds's"], "correctAnswer": "bird's", "explanation": "Singular possession." },
+        { "id": "c_pun_5", "type": "WordBank", "prompt": "Dash usage.", "sentence": "She was late ___ as usual.", "options": ["—", ",", ";", ":"], "correctAnswer": "—", "explanation": "Parenthetical break." },
+        { "id": "c_pun_6", "type": "WordBank", "prompt": "Parentheses.", "sentence": "He (___) is tall.", "options": ["John", "happy", "run", "the"], "correctAnswer": "John", "explanation": "Extra info." },
+        { "id": "c_pun_7", "type": "WordBank", "prompt": "Hyphen.", "sentence": "A ___ year-old child.", "options": ["five", "high", "well", "long"], "correctAnswer": "five", "explanation": "Compound adjective." },
+        { "id": "c_pun_8", "type": "WordBank", "prompt": "Quotation Marks.", "sentence": "She said, '___'.", "options": ["Hello", "Blue", "Jump", "Very"], "correctAnswer": "Hello", "explanation": "Direct speech." },
+        { "id": "c_pun_9", "type": "WordBank", "prompt": "Exclamation.", "sentence": "Stop ___", "options": ["!", "?", ".", ","], "correctAnswer": "!", "explanation": "Strong command." },
+        { "id": "c_pun_10", "type": "WordBank", "prompt": "Question Mark.", "sentence": "Who are you ___", "options": ["?", "!", ".", ","], "correctAnswer": "?", "explanation": "Direct question." },
+        { "id": "c_pun_11", "type": "WordBank", "prompt": "Ellipsis.", "sentence": "To be continued ___", "options": ["...", "..", ".", "...."], "correctAnswer": "...", "explanation": "Trailer/omission." },
+        { "id": "c_pun_12", "type": "WordBank", "prompt": "Slash.", "sentence": "He ___ she.", "options": ["/", "&", "+", "|"], "correctAnswer": "/", "explanation": "Alternative options." },
+        { "id": "c_pun_13", "type": "WordBank", "prompt": "Brackets.", "sentence": "The [___] were big.", "options": ["trees", "red", "run", "fast"], "correctAnswer": "trees", "explanation": "Editorial notes." },
+        { "id": "c_pun_14", "type": "WordBank", "prompt": "Comma Splice fix.", "sentence": "It's hot, ___ I'm thirsty.", "options": ["and", "so", "but", "while"], "correctAnswer": "and", "explanation": "Join independent clauses." },
+        { "id": "c_pun_15", "type": "WordBank", "prompt": "Colon before Quote.", "sentence": "The message read ___ 'Run!'", "options": [":", ",", ";", "—"], "correctAnswer": ":", "explanation": "Formal introduction." }
+      ]
+    }
+  ]
+}

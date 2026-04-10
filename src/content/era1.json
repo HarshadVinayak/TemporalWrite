@@ -1,0 +1,263 @@
+[
+  {
+    "id": "e1_1",
+    "type": "WordBank",
+    "prompt": "Choose the correct verb to complete the sentence.",
+    "sentence": "The dog ___ loudly at the mailman.",
+    "options": ["bark", "barks", "barking"],
+    "correctAnswer": "barks",
+    "explanation": "Since 'The dog' is singular, the verb must also be singular ('barks')."
+  },
+  {
+    "id": "e1_2",
+    "type": "ErrorSpotter",
+    "prompt": "Identify the incorrect word in the sentence.",
+    "sentenceWithErrors": "They is going to the park.",
+    "correctAnswer": "is",
+    "explanation": "The pronoun 'They' is plural and requires the plural verb 'are'.",
+    "topic": "Subject-Verb Agreement"
+  },
+  {
+    "id": "e1_3",
+    "type": "Transformer",
+    "prompt": "Rewrite the sentence to fix capitalization.",
+    "originalSentence": "my friend sarah lives in new york.",
+    "targetStructure": "Correct capitalization on first word and proper nouns.",
+    "correctAnswer": "My friend Sarah lives in New York.",
+    "explanation": "Always capitalize the first word of a sentence and proper nouns like names (Sarah) and places (New York)."
+  },
+  {
+    "id": "e1_4",
+    "type": "WordBank",
+    "prompt": "Which word is a noun?",
+    "sentence": "The tall ___ stood in the field.",
+    "options": ["quickly", "beautiful", "tree"],
+    "correctAnswer": "tree",
+    "explanation": "A noun is a person, place, or thing. 'Tree' is a thing."
+  },
+  {
+    "id": "e1_5",
+    "type": "ErrorSpotter",
+    "prompt": "Find the missing punctuation.",
+    "sentenceWithErrors": "Where are you going",
+    "correctAnswer": "?",
+    "explanation": "Questions must end with a question mark."
+  },
+  {
+    "id": "e1_6",
+    "type": "Transformer",
+    "prompt": "Change the sentence to past tense.",
+    "originalSentence": "I walk to school every day.",
+    "targetStructure": "Simple past tense verb.",
+    "correctAnswer": "I walked to school every day.",
+    "explanation": "To make 'walk' past tense, add '-ed' to get 'walked'."
+  },
+  {
+    "id": "e1_7",
+    "type": "WordBank",
+    "prompt": "Combine the sentences using the best conjunction.",
+    "sentence": "I like apples, ___ I don't like bananas.",
+    "options": ["and", "but", "so"],
+    "correctAnswer": "but",
+    "explanation": "'But' is used to show a contrast between liking apples and not liking bananas."
+  },
+  {
+    "id": "e1_8",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the incorrectly spelled basic word.",
+    "sentenceWithErrors": "The cat chased it's tail.",
+    "correctAnswer": "it's",
+    "explanation": "'It's' means 'it is'. The possessive form is 'its' without an apostrophe."
+  },
+  {
+    "id": "e1_9",
+    "type": "WordBank",
+    "prompt": "Select an adjective to complete the sentence.",
+    "sentence": "We saw a ___ elephant at the zoo.",
+    "options": ["run", "huge", "very"],
+    "correctAnswer": "huge",
+    "explanation": "An adjective describes a noun. 'Huge' describes the elephant."
+  },
+  {
+    "id": "e1_10",
+    "type": "Transformer",
+    "prompt": "Make this singular sentence plural.",
+    "originalSentence": "The leaf fell from the tree.",
+    "targetStructure": "Plural noun and corresponding verb.",
+    "correctAnswer": "The leaves fell from the trees.",
+    "explanation": "The plural of 'leaf' is 'leaves'."
+  },
+  {
+    "id": "e1_11",
+    "type": "WordBank",
+    "prompt": "Choose the correct possessive pronoun.",
+    "sentence": "That book belongs to me. It is ___.",
+    "options": ["my", "mine", "me"],
+    "correctAnswer": "mine",
+    "explanation": "'Mine' is a possessive pronoun that replaces 'my book'."
+  },
+  {
+    "id": "e1_12",
+    "type": "ErrorSpotter",
+    "prompt": "Find the incorrect irregular plural.",
+    "sentenceWithErrors": "The childs were playing in the park.",
+    "correctAnswer": "childs",
+    "explanation": "The plural of 'child' is 'children', not 'childs'."
+  },
+  {
+    "id": "e1_13",
+    "type": "Transformer",
+    "prompt": "Combine using a contraction.",
+    "originalSentence": "Do not run in the hallway.",
+    "targetStructure": "Use the contraction for 'Do not'.",
+    "correctAnswer": "Don't run in the hallway.",
+    "explanation": "'Do not' combines to form the contraction 'Don't'."
+  },
+  {
+    "id": "e1_14",
+    "type": "WordBank",
+    "prompt": "Select the correct plural form.",
+    "sentence": "We saw three ___ scurrying across the floor.",
+    "options": ["mouses", "mice", "mouse"],
+    "correctAnswer": "mice",
+    "explanation": "The plural of 'mouse' is 'mice'."
+  },
+  {
+    "id": "e1_15",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the contraction error.",
+    "sentenceWithErrors": "Your going to love this movie.",
+    "correctAnswer": "Your",
+    "explanation": "'Your' means belonging to you. The contraction for 'you are' is 'You're'."
+  },
+  {
+    "id": "e1_16",
+    "type": "Transformer",
+    "prompt": "Change to a possessive sentence.",
+    "originalSentence": "The toy belongs to the dog.",
+    "targetStructure": "Use an apostrophe for possession.",
+    "correctAnswer": "The dog's toy.",
+    "explanation": "Add 's to show the toy belongs to the dog."
+  },
+  {
+    "id": "e1_17",
+    "type": "WordBank",
+    "prompt": "Complete the contraction.",
+    "sentence": "___ be late if we don't hurry.",
+    "options": ["We'll", "Well", "We"],
+    "correctAnswer": "We'll",
+    "explanation": "'We'll' is the contraction for 'We will'."
+  },
+  {
+    "id": "e1_18",
+    "type": "ErrorSpotter",
+    "prompt": "Identify the incorrect plural noun.",
+    "sentenceWithErrors": "We need two knifes to cut the cake.",
+    "correctAnswer": "knifes",
+    "explanation": "Words ending in 'fe' usually change to 'ves' in plural: 'knives'."
+  },
+  {
+    "id": "e1_19",
+    "type": "Transformer",
+    "prompt": "Replace the underlined phrase with a possessive pronoun.",
+    "originalSentence": "The jacket belongs to her.",
+    "targetStructure": "Use a single possessive pronoun at the end.",
+    "correctAnswer": "The jacket is hers.",
+    "explanation": "'Hers' replaces 'belonging to her'."
+  },
+  {
+    "id": "e1_20",
+    "type": "WordBank",
+    "prompt": "Choose the correct irregular plural.",
+    "sentence": "I need to brush my ___ before bed.",
+    "options": ["tooths", "teeth", "tooth"],
+    "correctAnswer": "teeth",
+    "explanation": "The plural of 'tooth' is 'teeth'."
+  },
+  {
+    "id": "e1_21",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the incorrect contraction.",
+    "sentenceWithErrors": "I cant find my shoes anywhere.",
+    "correctAnswer": "cant",
+    "explanation": "The contraction for 'cannot' requires an apostrophe: 'can't'."
+  },
+  {
+    "id": "e1_22",
+    "type": "Transformer",
+    "prompt": "Rewrite using the correct contraction.",
+    "originalSentence": "She is my best friend.",
+    "targetStructure": "Contract 'She' and 'is'.",
+    "correctAnswer": "She's my best friend.",
+    "explanation": "The contraction for 'She is' is 'She's'."
+  },
+  {
+    "id": "e1_23",
+    "type": "WordBank",
+    "prompt": "Which pronoun correctly completes the sentence?",
+    "sentence": "The red car is his, but the blue one is ___.",
+    "options": ["our", "ours", "us"],
+    "correctAnswer": "ours",
+    "explanation": "'Ours' acts as a possessive pronoun standing alone."
+  },
+  {
+    "id": "e1_24",
+    "type": "ErrorSpotter",
+    "prompt": "Find the wrong plural form.",
+    "sentenceWithErrors": "Look at those beautiful deers in the forest.",
+    "correctAnswer": "deers",
+    "explanation": "The plural of 'deer' is just 'deer'."
+  },
+  {
+    "id": "e1_25",
+    "type": "Transformer",
+    "prompt": "Make an irregular plural.",
+    "originalSentence": "The man walked down the street.",
+    "targetStructure": "Change 'man' to its plural form.",
+    "correctAnswer": "The men walked down the street.",
+    "explanation": "The plural of 'man' is 'men'."
+  },
+  {
+    "id": "e1_26",
+    "type": "WordBank",
+    "prompt": "Choose the correct contraction.",
+    "sentence": "___ going to rain today.",
+    "options": ["Its", "It's", "Is"],
+    "correctAnswer": "It's",
+    "explanation": "'It's' is the contraction for 'It is'."
+  },
+  {
+    "id": "e1_27",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the incorrect possessive pronoun.",
+    "sentenceWithErrors": "The dog wagged it's tail.",
+    "correctAnswer": "it's",
+    "explanation": "'It's' means 'it is'. The possessive form is 'its'."
+  },
+  {
+    "id": "e1_28",
+    "type": "Transformer",
+    "prompt": "Combine these sentences using a possessive pronoun.",
+    "originalSentence": "This is their house. It belongs to them.",
+    "targetStructure": "Use a possessive pronoun to say whose house it is.",
+    "correctAnswer": "The house is theirs.",
+    "explanation": "'Theirs' acts as a possessive pronoun replacing 'their house'."
+  },
+  {
+    "id": "e1_29",
+    "type": "WordBank",
+    "prompt": "Complete the irregular plural.",
+    "sentence": "The ___ honked as they flew south for the winter.",
+    "options": ["gooses", "geese", "goose"],
+    "correctAnswer": "geese",
+    "explanation": "The plural of 'goose' is 'geese'."
+  },
+  {
+    "id": "e1_30",
+    "type": "ErrorSpotter",
+    "prompt": "Find the contraction error.",
+    "sentenceWithErrors": "There going to the store later.",
+    "correctAnswer": "There",
+    "explanation": "'There' refers to a place. The contraction for 'They are' is 'They're'."
+  }
+]

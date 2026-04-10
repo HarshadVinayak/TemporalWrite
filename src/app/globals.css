@@ -1,26 +1,194 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* Era 1: The Past (Parchment) */
+  --color-era1-bg: #fdf6e3;
+  --color-era1-text: #5c3b1d;
+  --color-era1-accent: #b58900;
+  
+  /* Era 2: The Industrial Present (Blueprint) */
+  --color-era2-bg: #0f172a; /* Deep Blueprint Blue */
+  --color-era2-text: #cbd5e1;
+  --color-era2-accent: #3b82f6;
+  --color-era2-grid: #1e293b;
+  
+  /* Era 3: The Digital Future (Neon) */
+  --color-era3-bg: #020617; /* Midnight Black */
+  --color-era3-text: #f8fafc;
+  --color-era3-accent: #0ea5e9;
+  --color-era3-neon: #22d3ee;
+  --color-era3-glow: rgba(34, 211, 238, 0.5);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.7s ease-in-out, color 0.5s ease-in-out, font-family 0.5s ease-in-out;
+}
+
+/* Era 1: 'The Past' - Earthy tones, playful fonts */
+.era-1 {
+  --era-bg: var(--color-era1-bg);
+  --era-text: var(--color-era1-text);
+  background-color: var(--era-bg);
+  color: var(--era-text);
+  font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E");
+}
+
+.era-1.dark {
+  --era-bg: #1a140f;
+  --era-text: #e6d5c3;
+  background-color: var(--era-bg);
+  color: var(--era-text);
+}
+
+/* Era 2: 'The Industrial Present' - Blueprint style, sharp corners, metallic buttons */
+.era-2 {
+  --era-bg: var(--color-era2-bg);
+  --era-text: var(--color-era2-text);
+  background-color: var(--era-bg);
+  color: var(--era-text);
+  font-family: "Inter", "Roboto Mono", sans-serif;
+  background-image: linear-gradient(var(--color-era2-grid) 1px, transparent 1px), 
+                    linear-gradient(90deg, var(--color-era2-grid) 1px, transparent 1px);
+  background-size: 25px 25px; /* Technical grid */
+}
+
+.era-2.dark {
+  --era-bg: #020617;
+  --era-text: #94a3b8;
+  background-color: var(--era-bg);
+  color: var(--era-text);
+}
+
+/* Era 3: 'The Digital Future' - Dark mode, neon accents, glassmorphism */
+.era-3 {
+  background-color: var(--color-era3-bg);
+  color: var(--color-era3-text);
+  font-family: "Space Grotesk", "JetBrains Mono", monospace;
+  background-image: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
+}
+
+/* UI Enhancements for Eras */
+.era-2 button {
+  border-radius: 2px !important; /* Sharp corners */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.era-3 .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.era-3 .neon-glow {
+  box-shadow: 0 0 15px var(--color-era3-glow);
+  border-color: var(--color-era3-neon);
+}
+
+/* Time Warp Tunnel Animation */
+.time-warp-tunnel {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: all;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Era transition fade - hides background asset loading */
+.era-transition-fade {
+  animation: era-fade 0.7s ease-in-out;
+}
+
+@keyframes era-fade {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.tunnel-ring {
+  position: absolute;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+@keyframes progress-stripes {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, 
+    rgba(255,255,255,.2) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    rgba(255,255,255,.2) 50%, 
+    rgba(255,255,255,.2) 75%, 
+    transparent 75%, 
+    transparent);
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+  animation: progress-stripes 1s linear infinite;
+}
+
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 25px rgba(59, 130, 246, 1); }
+  100% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+}
+
+.active-node-glow {
+  animation: glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Global Font Overrides */
+:root:has(.font-dyslexic) {
+  --font-override: "Comic Neue", sans-serif;
+}
+:root:has(.font-serif-classic) {
+  --font-override: "Geist Serif", "Times New Roman", serif;
+}
+:root:has(.font-mono-tech) {
+  --font-override: "JetBrains Mono", "Courier New", monospace;
+}
+
+div.font-dyslexic, body.font-dyslexic, .font-dyslexic * {
+  font-family: "Comic Neue", "Comic Sans MS", cursive !important;
+}
+
+div.font-serif-classic, body.font-serif-classic, .font-serif-classic * {
+  font-family: Georgia, 'Times New Roman', serif !important;
+}
+
+div.font-mono-tech, body.font-mono-tech, .font-mono-tech * {
+  font-family: "JetBrains Mono", "Roboto Mono", monospace !important;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, currentColor 25%, rgba(128, 128, 128, 0.4) 50%, currentColor 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
 }

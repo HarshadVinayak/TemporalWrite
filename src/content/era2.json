@@ -1,0 +1,88 @@
+[
+  {
+    "id": "e2_1",
+    "type": "ErrorSpotter",
+    "prompt": "Identify the punctuation error.",
+    "sentenceWithErrors": "I love reading books however I don't have much free time.",
+    "correctAnswer": "books however",
+    "explanation": "Use a semicolon before conjunctive adverbs like 'however' when connecting two independent clauses, e.g., 'books; however, I...'"
+  },
+  {
+    "id": "e2_2",
+    "type": "WordBank",
+    "prompt": "Complete the sentence with the correct relative pronoun.",
+    "sentence": "The student ___ essay won the contest was absent today.",
+    "options": ["who", "whom", "whose"],
+    "correctAnswer": "whose",
+    "explanation": "'Whose' indicates possession (the essay belonging to the student)."
+  },
+  {
+    "id": "e2_3",
+    "type": "Transformer",
+    "prompt": "Rewrite the sentence from passive to active voice.",
+    "originalSentence": "The new software was developed by our engineering team.",
+    "targetStructure": "Active voice with the 'engineering team' as the subject.",
+    "correctAnswer": "Our engineering team developed the new software.",
+    "explanation": "Active voice places the actor (the engineering team) before the action (developed)."
+  },
+  {
+    "id": "e2_4",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the faulty parallel structure.",
+    "sentenceWithErrors": "She likes to hike, swim, and riding her bike.",
+    "correctAnswer": "riding her bike",
+    "explanation": "Items in a list must be parallel. 'To hike, swim, and ride' maintains consistency."
+  },
+  {
+    "id": "e2_5",
+    "type": "WordBank",
+    "prompt": "Identify the rhetorical device used.",
+    "sentence": "He was a lion in battle.",
+    "options": ["Simile", "Metaphor", "Hyperbole"],
+    "correctAnswer": "Metaphor",
+    "explanation": "A metaphor compares two unrelated things by stating one is the other, without using 'like' or 'as'."
+  },
+  {
+    "id": "e2_6",
+    "type": "Transformer",
+    "prompt": "Combine into a compound-complex sentence.",
+    "originalSentence": "The concert started late. We enjoyed the music. We had to leave early.",
+    "targetStructure": "Use 'Although' and 'but'.",
+    "correctAnswer": "Although the concert started late, we enjoyed the music, but we had to leave early.",
+    "explanation": "Compound-complex sentences contain at least two independent clauses and one dependent clause."
+  },
+  {
+    "id": "e2_7",
+    "type": "ErrorSpotter",
+    "prompt": "Find the incorrect use of the subjunctive mood.",
+    "sentenceWithErrors": "If I was a millionaire, I would travel the world.",
+    "correctAnswer": "If I was",
+    "explanation": "In hypothetical situations (subjunctive mood), use 'were' instead of 'was' (If I were a millionaire)."
+  },
+  {
+    "id": "e2_8",
+    "type": "WordBank",
+    "prompt": "Choose the best use of an em dash.",
+    "sentence": "Three people ___ Jane, Mark, and Tim ___ arrived early.",
+    "options": [",", "-", "—"],
+    "correctAnswer": "—",
+    "explanation": "Em dashes are used to emphasize or offset a list or explanatory phrase."
+  },
+  {
+    "id": "e2_9",
+    "type": "Transformer",
+    "prompt": "Revise the sentence for concise parallel structure.",
+    "originalSentence": "The manager expects his team to arrive on time, for completing their work, and that they will be polite.",
+    "targetStructure": "Use an infinitive phrase series.",
+    "correctAnswer": "The manager expects his team to arrive on time, to complete their work, and to be polite.",
+    "explanation": "Parallel structure makes sentences clearer: to arrive, to complete, and to be."
+  },
+  {
+    "id": "e2_10",
+    "type": "ErrorSpotter",
+    "prompt": "Find the misplaced modifier.",
+    "sentenceWithErrors": "She served sandwiches to the children on paper plates.",
+    "correctAnswer": "children on paper plates",
+    "explanation": "The current phrasing suggests the children are on paper plates. It should be: 'She served sandwiches on paper plates to the children.'"
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "e3_1",
+    "type": "WordBank",
+    "prompt": "Select the correct term to resolve the syntactic ambiguity.",
+    "sentence": "I saw the man with the telescope. This is known as ___ ambiguity.",
+    "options": ["Lexical", "Structural", "Phonological"],
+    "correctAnswer": "Structural",
+    "explanation": "Structural (or syntactic) ambiguity occurs when a sentence can be parsed in multiple ways (e.g., Who has the telescope?)."
+  },
+  {
+    "id": "e3_2",
+    "type": "ErrorSpotter",
+    "prompt": "Identify the word that causes a sudden register shift.",
+    "sentenceWithErrors": "The ontological implications of this philosophical treatise are super gnarly.",
+    "correctAnswer": "super gnarly",
+    "explanation": "'Super gnarly' is highly informal and shifts the register inappropriately from an academic tone."
+  },
+  {
+    "id": "e3_3",
+    "type": "Transformer",
+    "prompt": "Rewrite to demonstrate ergative vs. absolutive alignment.",
+    "originalSentence": "The glass broke.",
+    "targetStructure": "Change the intransitive subject to a transitive object.",
+    "correctAnswer": "I broke the glass.",
+    "explanation": "In English, verbs like 'break' exhibit ergative patterns where the object of the transitive becomes the subject of the intransitive."
+  },
+  {
+    "id": "e3_4",
+    "type": "WordBank",
+    "prompt": "Identify the pragmatic function of this utterance.",
+    "sentence": "'It's getting cold in here' is often used as a direct request to ___.",
+    "options": ["agree", "close the window", "buy a coat"],
+    "correctAnswer": "close the window",
+    "explanation": "In pragmatics, speakers often use indirect speech acts to make requests politely."
+  },
+  {
+    "id": "e3_5",
+    "type": "ErrorSpotter",
+    "prompt": "Spot the flawed diachronic usage (anachronism) in historical fiction context.",
+    "sentenceWithErrors": "Lord Wellington downloaded the tactical maps for the Battle of Waterloo.",
+    "correctAnswer": "downloaded",
+    "explanation": "The term 'downloaded' belongs strictly to modern digital contexts and is anachronistic for the 19th century."
+  },
+  {
+    "id": "e3_6",
+    "type": "Transformer",
+    "prompt": "Resolve the scoping ambiguity.",
+    "originalSentence": "Every boy loves a certain girl.",
+    "targetStructure": "Clarify that there is one specific girl loved by all the boys.",
+    "correctAnswer": "There is a certain girl whom every boy loves.",
+    "explanation": "Rewriting forces the wide scope reading of the existential quantifier 'a certain girl'."
+  },
+  {
+    "id": "e3_7",
+    "type": "WordBank",
+    "prompt": "Choose the precise lexical collocation.",
+    "sentence": "The committee reached a ___ conclusion after intense debate.",
+    "options": ["strong", "heavy", "foregone"],
+    "correctAnswer": "foregone",
+    "explanation": "'Foregone conclusion' is an established collocation meaning a result that is certain to happen."
+  },
+  {
+    "id": "e3_8",
+    "type": "ErrorSpotter",
+    "prompt": "Identify the discourse marker that breaks logical flow.",
+    "sentenceWithErrors": "The experiment failed due to contamination. Consequently, we were extremely successful.",
+    "correctAnswer": "Consequently",
+    "explanation": "'Consequently' indicates a logical result, but failure leading to success is a contradiction without further context."
+  },
+  {
+    "id": "e3_9",
+    "type": "Transformer",
+    "prompt": "Alter the sentence to reflect formal syntactic inversion.",
+    "originalSentence": "I have never seen such a beautiful painting.",
+    "targetStructure": "Begin with 'Never'.",
+    "correctAnswer": "Never have I seen such a beautiful painting.",
+    "explanation": "Formal inversion applies when sentences begin with negative adverbs like 'never', 'rarely', or 'seldom'."
+  },
+  {
+    "id": "e3_10",
+    "type": "WordBank",
+    "prompt": "Identify the semantic nuance.",
+    "sentence": "While 'arrogant' is negative, '___' implies a more positive, justified self-assurance.",
+    "options": ["haughty", "confident", "conceited"],
+    "correctAnswer": "confident",
+    "explanation": "Lexical semantics involves understanding connotations; 'confident' is the positive counterpart to 'arrogant'."
+  }
+]
