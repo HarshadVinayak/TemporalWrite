@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, CheckCircle2, XCircle, GraduationCap, ArrowLeft, Loader2, Sparkles, Trophy } from 'lucide-react';
 import Link from 'next/link';
 import { useUserStore } from '@/store/userStore';
+import { Certificate } from './Certificate';
 
 type ExamState = 'not_started' | 'loading' | 'in_progress' | 'results';
 
