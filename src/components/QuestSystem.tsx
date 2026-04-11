@@ -60,7 +60,7 @@ export function QuestSystem() {
   const startQuest = (quest: Quest) => {
     setActiveQuest(quest);
     setMessages([{ 
-      role: 'assistant', 
+      role: 'assistant' as const, 
       content: `Greetings, traveller. I am ${quest.character}. ${quest.description} Can you help me?` 
     }]);
     setTargetsMet([]);
@@ -72,7 +72,7 @@ export function QuestSystem() {
 
     const userMsg = input.trim();
     setInput('');
-    const newMessages = [...messages, { role: 'user', content: userMsg }];
+    const newMessages = [...messages, { role: 'user' as const, content: userMsg }];
     setMessages(newMessages);
     setIsTyping(true);
 

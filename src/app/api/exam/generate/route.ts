@@ -55,7 +55,7 @@ Example:
     const content = data.choices[0].message.content;
     
     // Defensive parsing for JSON
-    const jsonMatch = content.match(/\[.*\]/s);
+    const jsonMatch = content.match(/\[[\s\S]*\]/);
     if (!jsonMatch) throw new Error('AI failed to return JSON array.');
     
     const questions = JSON.parse(jsonMatch[0]);
