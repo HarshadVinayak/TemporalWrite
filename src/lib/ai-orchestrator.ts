@@ -24,6 +24,19 @@ const SYSTEM_VOICE = 'You are Chronos AI powering a Voice Lab. Be extremely conc
 const SYSTEM_DEEP  = 'You are Chronos AI — an elite English grammar professor. Your explanations are academic, deeply insightful, and encouraging. You cite linguistic rules by name when appropriate.';
 const SYSTEM_GEN   = 'You are Chronos AI — a content architect generating grammar exercises. Return ONLY minified valid JSON arrays.';
 
+// Helper to get keys from env, supporting both standard and legacy VITE_ prefixes for transition
+function getAIKey(name: string): string {
+  const key = process.env[name] || process.env[`VITE_${name}`];
+  if (!key) {
+    // In production (Cloud Functions), we expect these from Secret Manager
+    if (process.env.NODE_ENV === 'production') {
+       console.error(`[CRITICAL] Missing ${name} in production secrets.`);
+    }
+    throw new Error(`${name} missing from environment/secrets.`);
+  }
+  return key;
+}
+
 // ──────────────────────────────────────────── helpers ───
 
 async function groqCall(
@@ -31,8 +44,7 @@ async function groqCall(
   maxTokens: number,
   model = GROQ_PRIMARY_MODEL
 ): Promise<string> {
-  const key = process.env.GROQ_API_KEY;
-  if (!key) throw new Error('GROQ_API_KEY missing');
+  const key = getAIKey('GROQ_API_KEY');
 
   const res = await fetch(GROQ_API_URL, {
     method: 'POST',
@@ -54,8 +66,7 @@ async function openRouterCall(
   maxTokens: number,
   model = OPENROUTER_PRIMARY_MODEL
 ): Promise<string> {
-  const key = process.env.OPENROUTER_API_KEY;
-  if (!key) throw new Error('OPENROUTER_API_KEY missing');
+  const key = getAIKey('OPENROUTER_API_KEY');
 
   const res = await fetch(OPENROUTER_API_URL, {
     method: 'POST',

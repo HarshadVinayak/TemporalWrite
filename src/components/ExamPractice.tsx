@@ -7,9 +7,9 @@ import Link from 'next/link';
 import { useUserStore } from '@/store/userStore';
 import { Certificate } from './Certificate';
 
-type ExamState = 'not_started' | 'loading' | 'in_progress' | 'results';
+export type ExamState = 'not_started' | 'loading' | 'in_progress' | 'results';
 
-interface Question {
+export interface Question {
   question: string;
   options: string[];
   correctIndex: number;

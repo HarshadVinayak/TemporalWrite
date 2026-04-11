@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sword, X, Send, Trophy, Scroll, Target, Crown, CheckCircle2 } from 'lucide-react';
 import { useUserStore } from '@/store/userStore';
 
-interface Quest {
+export interface Quest {
   id: string;
   era: 1 | 2 | 3;
   title: string;
