@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cd functions && npm install && cd .. && next build",
+    "build": "bun install && next build",
     "start": "next start",
     "start:standalone": "node .next/standalone/server.js",
     "lint": "eslint"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
