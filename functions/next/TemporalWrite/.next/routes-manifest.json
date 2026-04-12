@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/analyze-voice",
+      "regex": "^/api/analyze\\-voice(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/analyze\\-voice(?:/)?$"
+    },
+    {
+      "page": "/api/chat",
+      "regex": "^/api/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chat(?:/)?$"
+    },
+    {
+      "page": "/api/exam/generate",
+      "regex": "^/api/exam/generate(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/exam/generate(?:/)?$"
+    },
+    {
+      "page": "/api/explain",
+      "regex": "^/api/explain(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/explain(?:/)?$"
+    },
+    {
+      "page": "/api/quest",
+      "regex": "^/api/quest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/quest(?:/)?$"
+    },
+    {
+      "page": "/api/temporal-gen",
+      "regex": "^/api/temporal\\-gen(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/temporal\\-gen(?:/)?$"
+    },
+    {
+      "page": "/api/translate",
+      "regex": "^/api/translate(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/translate(?:/)?$"
+    },
+    {
+      "page": "/api/vision",
+      "regex": "^/api/vision(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/vision(?:/)?$"
+    },
+    {
+      "page": "/api/vision/solve",
+      "regex": "^/api/vision/solve(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/vision/solve(?:/)?$"
+    },
+    {
+      "page": "/api/warp",
+      "regex": "^/api/warp(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/warp(?:/)?$"
+    },
+    {
+      "page": "/exam-practice",
+      "regex": "^/exam\\-practice(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/exam\\-practice(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

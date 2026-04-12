@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/analyze-voice/route": "/api/analyze-voice",
+  "/api/chat/route": "/api/chat",
+  "/api/exam/generate/route": "/api/exam/generate",
+  "/api/explain/route": "/api/explain",
+  "/api/quest/route": "/api/quest",
+  "/api/temporal-gen/route": "/api/temporal-gen",
+  "/api/translate/route": "/api/translate",
+  "/api/vision/route": "/api/vision",
+  "/api/vision/solve/route": "/api/vision/solve",
+  "/api/warp/route": "/api/warp",
+  "/exam-practice/page": "/exam-practice",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/"
+}
