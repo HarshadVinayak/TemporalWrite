@@ -1,7 +1,7 @@
 'use client';
 
 export function useAudio() {
-  const playSound = (type: 'click' | 'correct' | 'wrong' | 'levelup') => {
+  const playSound = (type: 'click' | 'correct' | 'wrong' | 'levelup' | 'timeshift' | 'magic') => {
     try {
       const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
       if (!AudioContext) return;
