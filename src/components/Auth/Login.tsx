@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase, getURL } from "@/lib/supabase";
 import { Mail, Github, Chrome, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ export function Login() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: window.location.origin,
+        emailRedirectTo: getURL(),
       },
     });
 
@@ -36,7 +36,7 @@ export function Login() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: window.location.origin,
+        redirectTo: getURL(),
       },
     });
     if (error) setMessage({ type: "error", text: error.message });
