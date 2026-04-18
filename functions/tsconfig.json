@@ -3,7 +3,7 @@
     "module": "Node16",
     "esModuleInterop": true,
     "moduleResolution": "Node16",
-    "ignoreDeprecations": "6.0",
+    "ignoreDeprecations": "5.0",
     "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
