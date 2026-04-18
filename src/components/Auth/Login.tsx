@@ -4,6 +4,7 @@ import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Mail, Github, Chrome, Loader2 } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function Login() {
   const [email, setEmail] = useState("");
