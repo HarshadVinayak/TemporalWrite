@@ -114,10 +114,25 @@ export default function Home() {
         <Sidebar />
         
         {/* Scrollable Path Wrapper */}
-        <main className="flex-1 overflow-x-hidden pt-10 pb-0 flex flex-col items-center md:pl-20 relative z-10 w-full">
-          <div className="text-center mb-10 z-10 relative">
-            <h1 className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400">Your Journey</h1>
-            <p className="text-lg opacity-80">Master time and language</p>
+        <main className="flex-1 overflow-x-hidden pt-10 pb-0 flex flex-col items-center md:pl-24 relative z-10 w-full min-h-screen">
+          <div className="absolute inset-0 z-[-1] opacity-50 temporal-grid"></div>
+          
+          <div className="text-center mb-16 z-10 relative">
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="relative w-32 h-32 mx-auto mb-6 mascot-float"
+            >
+              <Image 
+                src="/mascot.png" 
+                alt="Chronos Librarian" 
+                fill 
+                className="object-contain drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+              />
+            </motion.div>
+            <h1 className="text-5xl font-black mb-2 tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-black to-gray-600 dark:from-white dark:to-gray-500">The Path of Echoes</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.3em] opacity-40">Master language across the timeline</p>
           </div>
           
           <LearningTree />

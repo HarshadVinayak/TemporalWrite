@@ -4,6 +4,7 @@ import { Map, BookOpen, Clock, Settings, Mic, Trophy, Menu, Cpu, GraduationCap, 
 import { motion } from 'framer-motion';
 import { useUserStore } from '@/store/userStore';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Sidebar() {
   const { 
@@ -27,9 +28,21 @@ export function Sidebar() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-      className="fixed left-0 top-0 bottom-0 w-20 flex flex-col items-center py-8 bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border-r border-black/5 dark:border-white/5 z-50 hidden md:flex"
+      className="fixed left-0 top-0 bottom-0 w-24 flex flex-col items-center py-8 bg-white/40 dark:bg-black/40 backdrop-blur-3xl border-r border-white/10 z-[100] hidden md:flex"
     >
-      <nav className="flex flex-col space-y-6 mt-16 px-2">
+      <div className="relative w-14 h-14 mb-10 group cursor-pointer">
+        <div className="absolute inset-0 bg-blue-500/20 blur-xl group-hover:bg-blue-500/40 transition-all rounded-full" />
+        <Link href="/" className="relative block w-full h-full rounded-2xl overflow-hidden border border-white/20 shadow-2xl transition-transform hover:scale-110 active:scale-95">
+          <Image 
+            src="/mascot.png" 
+            alt="TemporalWrite" 
+            fill 
+            className="object-cover"
+          />
+        </Link>
+      </div>
+
+      <nav className="flex flex-col space-y-5 px-3">
         <button 
           onClick={() => setIsNavOpen(true)}
           className="p-3 text-gray-500 hover:text-black dark:hover:text-white transition-colors hover:bg-black/5 dark:hover:bg-white/10 rounded-2xl" 

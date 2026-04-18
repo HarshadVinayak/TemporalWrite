@@ -124,12 +124,17 @@ export function ChatCortex() {
         {/* Header */}
         <div className="p-4 border-b border-black/5 dark:border-white/5 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-600 text-white rounded-xl shadow-lg">
-              <Cpu size={20} />
+            <div className="relative w-12 h-12 rounded-2xl overflow-hidden shadow-xl border-2 border-white dark:border-white/10">
+              <Image 
+                src="/mascot.png" 
+                alt="Chronos Librarian" 
+                fill 
+                className="object-cover"
+              />
             </div>
             <div>
-              <h3 className="font-bold text-lg">ChatCortex</h3>
-              <p className="text-[10px] font-black uppercase tracking-widest opacity-50">Experimental Librarian AI</p>
+              <h3 className="font-bold text-lg tracking-tight">Chronos Librarian</h3>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-50 text-blue-600 dark:text-blue-400">Master Archivist</p>
             </div>
           </div>
           
@@ -160,17 +165,40 @@ export function ChatCortex() {
         {/* Messages */}
         <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4">
           {chatHistory.length === 0 && (
-            <div className="h-full flex flex-col items-center justify-center text-center p-8 opacity-40">
-              <Sparkles size={48} className="mb-4 text-blue-500" />
-              <p className="text-sm font-medium">Hello! I am the Chronos Librarian. Ask me anything about grammar or your progress.</p>
-              <div className="mt-6 grid grid-cols-1 gap-2 w-full">
-                {['/analyze recent mistakes', '/translate into Era 3', '/quiz me on verbs'].map(cmd => (
+            <div className="h-full flex flex-col items-center justify-center text-center p-8">
+              <motion.div 
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="relative w-40 h-40 mb-6 drop-shadow-[0_0_30px_rgba(59,130,246,0.2)]"
+              >
+                <Image 
+                  src="/mascot.png" 
+                  alt="Librarian" 
+                  fill 
+                  className="object-contain"
+                />
+              </motion.div>
+              <h4 className="text-xl font-black mb-2 uppercase tracking-tighter">Greetings, Initiate</h4>
+              <p className="text-xs font-medium opacity-60 leading-relaxed mb-8">
+                I am the Chronos Librarian. I oversee the archives of human grammar across all eras. 
+                How may I assist your temporal studies today?
+              </p>
+              <div className="grid grid-cols-1 gap-3 w-full max-w-[280px]">
+                {[
+                  { label: "Analyze Mistakes", cmd: "/analyze recent mistakes", icon: Sparkles, color: "text-blue-500" },
+                  { label: "Time Shift Sentence", cmd: "/translate into Era 3", icon: Zap, color: "text-purple-500" },
+                  { label: "Era Quiz", cmd: "/quiz me on verbs", icon: Brain, color: "text-emerald-500" }
+                ].map(item => (
                   <button 
-                    key={cmd}
-                    onClick={() => setInput(cmd)}
-                    className="text-[10px] font-bold border border-black/10 dark:border-white/10 py-2 rounded-lg hover:bg-black/5 transition-all text-left px-3 flex items-center justify-between"
+                    key={item.cmd}
+                    onClick={() => setInput(item.cmd)}
+                    className="group text-[11px] font-black uppercase tracking-widest border border-black/5 dark:border-white/5 bg-white/50 dark:bg-black/20 py-4 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 transition-all text-left px-4 flex items-center justify-between shadow-sm active:scale-95"
                   >
-                    {cmd} <ChevronRight size={10} />
+                    <span className="flex items-center gap-3">
+                      <item.icon size={14} className={item.color} />
+                      {item.label}
+                    </span>
+                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </button>
                 ))}
               </div>
