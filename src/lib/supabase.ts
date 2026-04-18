@@ -11,3 +11,11 @@ export const supabase = createClient(
   supabaseUrl || 'https://placeholder.supabase.co',
   supabaseAnonKey || 'placeholder-key'
 );
+
+// Server-side admin client (for API routes) using the Service Role Key
+export const supabaseAdmin = typeof window === 'undefined' 
+  ? createClient(
+      supabaseUrl || '', 
+      process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+    )
+  : null;

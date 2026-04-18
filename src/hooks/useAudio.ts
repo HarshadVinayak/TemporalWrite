@@ -56,6 +56,30 @@ export function useAudio() {
           chordOsc.start(ctx.currentTime);
           chordOsc.stop(ctx.currentTime + 2.0);
         });
+      } else if (type === 'timeshift') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(100, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 1.2);
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 0.4);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.2);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 1.2);
+      } else if (type === 'magic') {
+        const frequencies = [880, 1108.73, 1318.51, 1760]; // A5 major chord
+        frequencies.forEach((freq, i) => {
+          const chordOsc = ctx.createOscillator();
+          const chordGain = ctx.createGain();
+          chordOsc.connect(chordGain);
+          chordGain.connect(ctx.destination);
+          chordOsc.type = 'triangle';
+          chordOsc.frequency.value = freq;
+          chordGain.gain.setValueAtTime(0, ctx.currentTime);
+          chordGain.gain.linearRampToValueAtTime(0.1, ctx.currentTime + (i * 0.05));
+          chordGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.0);
+          chordOsc.start(ctx.currentTime);
+          chordOsc.stop(ctx.currentTime + 1.0);
+        });
       }
     } catch (e) {
       console.error("Audio playback error", e);

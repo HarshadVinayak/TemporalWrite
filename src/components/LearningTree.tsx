@@ -38,7 +38,7 @@ export function LearningTree() {
   const handleGenerateBonus = async () => {
     if (isGenerating) return;
     setIsGenerating(true);
-    playSound('click');
+    playSound('magic');
 
     try {
       const response = await fetch('/api/temporal-gen', {
@@ -128,21 +128,22 @@ export function LearningTree() {
             <button
               onClick={() => {
                 if (isUnlocked) {
-                  playSound('click');
+                  playSound('timeshift');
                   setCurrentLesson(lesson.id);
                 }
               }}
               disabled={!isUnlocked}
               className={`
                 w-24 h-24 flex flex-col items-center justify-center font-bold text-xl
-                active:translate-y-2 transition-all duration-200
+                active:translate-y-2 transition-all duration-500
+                hover:scale-115 hover:rotate-3
                 ${nodeClass} ${bgColor} ${iconColor}
-                ${isCurrentActiveNode ? 'active-node-glow scale-110' : ''}
+                ${isCurrentActiveNode ? 'active-node-glow scale-110 ring-4 ring-white/20' : ''}
               `}
             >
-              {isCompleted ? <CheckCircle2 size={40} /> : 
-               isCurrentActiveNode ? <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1 }}><Star size={40} /></motion.div> : 
-               isUnlocked ? <Star size={40} /> : <Lock size={40} />}
+              {isCompleted ? <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}><CheckCircle2 size={40} /></motion.div> : 
+               isCurrentActiveNode ? <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 8, ease: "linear" }}><Star size={40} /></motion.div> : 
+               isUnlocked ? <motion.div whileHover={{ scale: 1.2 }}><Star size={40} /></motion.div> : <Lock size={40} className="opacity-40" />}
             </button>
 
             {/* Node Label */}
